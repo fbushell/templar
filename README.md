@@ -6,7 +6,7 @@ templar
 
 
 ## About
-This template is meant to be a good starting point when building a web app. Documentation includes information on how to utilize this in conjunction with authoring a Squarespace template using the Developer Platform. That is the primary purpose of this code base. After so many projects, a relatively refined starting point surfaced, this being the result of that. Everybody has an approach and style, so after awhile a boilerplate becomes a faster starting point. Enjoy.
+This template is meant to be a good starting point when building a web app. It is still a work in progress and needs to be tweaked as well as have updated documentation. Working on it...
 
 
 
