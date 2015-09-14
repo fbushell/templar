@@ -1,0 +1,3 @@
+<script class="js-painter-canvas" type="text/x-painter-canvas" id="example">
+    <div>{.meta-left}objectProperty{.meta-right}</div>
+</script>

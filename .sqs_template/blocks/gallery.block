@@ -1,0 +1,57 @@
+{.if options}
+{# Options means this is rendering via layout-engine and main-content #}
+<section class="gallery gallery--{options.design} js-gallery js-gallery-{options.design}" data-gallery-type="{options.design}">
+    {.equal? options.design "slider"}
+        <div class="valigner">
+            <div class="valigner__cell">
+                <div class="gallery__items js-gallery-items">
+                    {.repeated section items}
+                        <img class="gallery__image js-gallery-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" />
+                    {.end}
+                </div>
+            </div>
+        </div>
+
+    {.or equal? options.design "slideshow"}
+        <ul class="gallery__items js-gallery-items aspect--widescreen">
+            {.repeated section items}
+                <li class="gallery__image js-gallery-image -cover" data-img-src="{assetUrl}" data-variants="{systemDataVariants}"></li>
+            {.end}
+        </ul>
+        <ul class="gallery__thumbs">
+            {.repeated section items}
+                <li class="gallery__thumb js-gallery-thumb"></li>
+            {.end}
+        </ul>
+
+    {.or equal? options.design "grid"}
+        <ul class="gallery__items js-gallery-items">
+            {.repeated section items}
+                <li class="gallery__item js-gallery-item width--{options.thumbnails-per-row}">
+                    <div class="gallery__image js-gallery-image -cover aspect--{options.aspect-ratio}" data-img-src="{assetUrl}" data-variants="{systemDataVariants}"></div>
+                </li>
+            {.end}
+        </ul>
+
+    {.or equal? options.design "stacked"}
+        <div class="gallery__items js-gallery-items">
+            {.repeated section items}
+                <img class="gallery__image js-gallery-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" />
+            {.end}
+        </div>
+    {.end}
+</section>
+{.or}
+{#
+    No options means we are manually applying this block elsewhere
+    In order to manually apply the block, the context in question must
+    have an array of "items" to iterate over and build the gallery.
+#}
+<section class="gallery gallery--stacked js-gallery js-gallery-stacked" data-gallery-type="stacked">
+    <div class="gallery__items js-gallery-items">
+        {.repeated section items}
+            <img class="gallery__image js-gallery-image" data-img-src="{assetUrl}" data-variants="{systemDataVariants}" />
+        {.end}
+    </div>
+</section>
+{.end}

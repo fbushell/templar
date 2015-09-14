@@ -1,0 +1,125 @@
+/******************************************************************************
+ * Fonts: Util
+*******************************************************************************/
+@mixin font-normal() {
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+/******************************************************************************
+ * Fonts: Sans-serif
+*******************************************************************************/
+@mixin font-sans-text() {
+    font-family: $sans-serif-text;
+    font-weight: 400;
+    @include font-normal();
+}
+@mixin font-sans-text-semibold() {
+    font-family: $sans-serif-text;
+    font-weight: 500;
+    @include font-normal();
+}
+@mixin font-sans-text-bold() {
+    font-family: $sans-serif-text;
+    font-weight: 600;
+    @include font-normal();
+}
+
+
+/******************************************************************************
+ * Fonts: Serif
+*******************************************************************************/
+@mixin font-serif-text() {
+    font-family: $serif-text;
+    font-weight: 400;
+    @include font-normal();
+}
+@mixin font-serif-text-semibold() {
+    font-family: $serif-text;
+    font-weight: 500;
+    @include font-normal();
+}
+
+@mixin font-serif-display() {
+    font-family: $serif-display;
+    font-weight: 400;
+    @include font-normal();
+}
+@mixin font-serif-display-light() {
+    font-family: $serif-display-light;
+    font-weight: 300;
+    @include font-normal();
+}
+@mixin font-serif-display-medium() {
+    font-family: $serif-display-medium;
+    font-weight: 500;
+    @include font-normal();
+}
+
+
+/******************************************************************************
+ * Type
+*******************************************************************************/
+@mixin meta-type() {
+    color: $grey-text;
+    font-size: $meta-size;
+    line-height: 1.8;
+    @include font-sans-text();
+}
+@mixin p() {
+    font-size: $p-size;
+    line-height: 1.90909091;
+    @include font-sans-text();
+}
+@mixin h1() {
+    font-size: $h1-size;
+    line-height: 1.0357;
+    @include font-serif-display();
+}
+@mixin h2() {
+    font-size: $h2-size;
+    line-height: 1.27272727;
+    @include font-serif-display();
+}
+@mixin bq() {
+    font-size: $bq-size;
+    line-height: 1.52631579;
+    @include font-serif-display-light();
+}
+@mixin title-image-lock() {
+    color: $dark;
+    font-size: $title-size-px;
+    line-height: 1.2;
+    @include font-serif-display-light();
+}
+@mixin title-type-lock() {
+    color: $dark;
+    font-size: $title-size-big-vw;
+    line-height: 1.08695652;
+    @include font-serif-display-light();
+}
+
+
+/******************************************************************************
+ * Animations
+*******************************************************************************/
+@mixin ani-lift-block() {
+    transform: translate3d( 0, $nudge-size, 0 );
+    transition: transform $ease-duration $ease;
+
+    &.is-active {
+        transform: translate3d( 0, 0, 0 );
+        }
+    &.is-loading {
+        transform: translate3d( 0, ($nudge-size * 2), 0 );
+        }
+}
+@mixin ani-move-block() {
+    transition: transform $ease-duration $ease,
+                opacity $ease-duration $ease-cubic;
+}
+@mixin ani-move-block-delayed( $delay: 200ms ) {
+    transition: opacity $ease-duration $ease $delay,
+                transform $ease-duration $ease $delay;
+}

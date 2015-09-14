@@ -1,0 +1,16 @@
+        </main>
+
+
+        <footer class="footer js-footer"></footer>
+
+
+        {@|apply intro.block}
+        {@|apply javascript.block}
+
+
+        <squarespace:script src="app.js" combo="true" />
+
+
+        {squarespace-footers}
+    </body>
+</html>

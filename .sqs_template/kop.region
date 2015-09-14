@@ -1,0 +1,10 @@
+<section class="kop js-kop" data-content-field="main-content">
+    <div class="kop__cover cover js-cover">
+        <div class="valigner">
+            <div class="valigner__cell">
+                <!-- Stuff here for the cover -->
+            </div>
+        </div>
+    </div>
+    {squarespace.main-content}
+</section>

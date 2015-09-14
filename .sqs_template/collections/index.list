@@ -1,0 +1,3 @@
+{.section collection}
+    <section class="grid grid--flow js-grid expander" data-type="index" data-uri="{urlId}" data-collection-id="{id}"></section>
+{.end}

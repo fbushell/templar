@@ -1,0 +1,161 @@
+/******************************************************************************
+ * Meta Data
+*******************************************************************************/
+.meta {
+    @include meta-type();
+    }
+
+
+/******************************************************************************
+ * Emphasis
+*******************************************************************************/
+.em {
+    @include font-serif-display-medium();
+    }
+
+
+/******************************************************************************
+ * Paragraphs
+*******************************************************************************/
+.p {
+    @include p();
+    }
+.p + .p {
+    margin-top: ($mobile-padding / 2);
+    }
+.p--col {
+    max-width: 750px;
+    width: 100%;
+    }
+
+
+/******************************************************************************
+ * Links
+*******************************************************************************/
+.a {
+    }
+.a-link {
+    border-bottom: 1px solid transparent;
+    display: inline;
+    transition: border-color $fast-duration $ease;
+    }
+
+.a-h {
+    border-bottom: 1px solid transparent;
+    color: $dark;
+    display: inline-block;
+    font-size: 40px;
+    transition: color $fast-duration $ease;
+    @include font-serif-display-light();
+
+    &.is-active {
+        border-bottom: 1px solid $grey-text;
+        color: $grey-text;
+        }
+    }
+
+
+/******************************************************************************
+ * Quotes
+*******************************************************************************/
+.bq {
+    @include bq();
+    display: inline-block;
+    max-width: $bq-width;
+    text-align: left;
+    width: 100%;
+
+    &:before {
+        content: "\201C";
+        }
+    &:after {
+        content: "\201D";
+        }
+    }
+.bq--big {
+    font-size: $bq-size-big;
+    line-height: 1.28571429;
+    max-width: $bq-width-big;
+    width: 100%;
+    }
+
+
+/******************************************************************************
+ * Headlines
+*******************************************************************************/
+.h6,
+.h5,
+.h4,
+.h3,
+.h2,
+.h1 {
+    }
+
+.h1 {
+    @include h1();
+    }
+.h2 {
+    @include h2();
+    }
+
+.hgroup .h1 + .title {
+    padding-top: $mobile-padding;
+    }
+
+
+/******************************************************************************
+ * Titles
+*******************************************************************************/
+.headline {
+    @include title-type-lock();
+    }
+.title {
+    @include title-image-lock();
+    }
+
+
+/******************************************************************************
+ * Responsive
+*******************************************************************************/
+@media only screen and ( min-width: $break-desktop-large ) {
+    .h2,
+    .headline {
+        font-size: $title-size-big-px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-full ) {
+    .h2,
+    .headline {
+        font-size: $title-size-big-medium-px;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-laptop-medium ) {
+    .p {
+        font-size: $p-size-medium;
+        }
+}
+
+
+
+@media only screen and ( max-width: $break-mobile-full ) {
+    .p {
+        font-size: $p-size-small;
+        }
+    .h1 {
+        font-size: $h1-size-small;
+        }
+    .bq,
+    .bq--big {
+        font-size: $bq-size-small;
+        }
+    .meta,
+    .caption {
+        font-size: $meta-size-small;
+        }
+}

@@ -1,0 +1,46 @@
+/******************************************************************************
+ * User Agent
+*******************************************************************************/
+::-webkit-scrollbar {
+    display: none;
+    }
+::-moz-selection {
+    background-color: $dark;
+    color: $white;
+    }
+::selection {
+    background-color: $dark;
+    color: $white;
+    }
+
+
+/******************************************************************************
+ * Document
+*******************************************************************************/
+html {
+    background-color: $grey-bg;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+body {
+    background-color: $grey-bg;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+    -webkit-touch-callout: none;
+    @include font-sans-text();
+    }
+a {
+    text-decoration: none;
+    }
+
+
+/******************************************************************************
+ * Box Sizing
+*******************************************************************************/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    }

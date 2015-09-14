@@ -1,0 +1,7 @@
+<section class="intro js-intro screen is-active">
+    <div class="screen__wrap valigner">
+        <div class="valigner__cell">
+            <img class="logo js-logo" src="" alt="Logo" />
+        </div>
+    </div>
+</section>

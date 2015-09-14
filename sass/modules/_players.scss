@@ -1,0 +1,46 @@
+/******************************************************************************
+ * Video Player
+*******************************************************************************/
+._video {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    }
+._video__wrap {
+    position: relative;
+    width: 100%;
+    }
+._video__video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
+._video__poster {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: opacity $ease-duration $ease-cubic,
+                visibility $ease-duration $ease-cubic;
+
+    &.is-inactive {
+        opacity: 0;
+        visibility: hidden;
+        }
+    }
+._video__icon {
+    
+    }
+
+
+
+// Video hovered state
+._video.is-loaded  {
+    opacity: 1;
+}
+._video.is-hovered {
+}
