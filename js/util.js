@@ -52,16 +52,6 @@ const translate3d = function ( el, x, y, z ) {
 
 /**
  *
- * @description Single app instanceof [MediaBox]{@link https://github.com/ProperJS/MediaBox} for custom audio/video
- * @member mediabox
- * @memberof util
- *
- */
-const mediabox = new MediaBox();
-
-
-/**
- *
  * @description Single app instanceof [Controller]{@link https://github.com/ProperJS/Controller} for arbitrary event emitting
  * @member emitter
  * @memberof util
@@ -477,7 +467,6 @@ const splitArray = function ( arr, num ) {
 *******************************************************************************/
 export default {
     // Classes
-    mediabox,
     emitter,
     scroller,
     resizer,

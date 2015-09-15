@@ -51,9 +51,11 @@ const modInit = function () {
  * @returns {object}
  *
  */
+/*
 const apiLoad = function () {
     return api.load( dom.nav.data() );
 };
+*/
 
 
 /**
@@ -76,9 +78,13 @@ const appInit = function () {
 window.onload = function () {
     // Load { data } via API
     // This can be disabled if not using API
-    apiLoad().done( () => modInit() );
+    //apiLoad().done( () => modInit() );
 
 
     // Present content
-    util.emitter.on( "app--preload-done", appInit );
+    //util.emitter.on( "app--preload-done", appInit );
+
+
+    modInit();
+    appInit();
 };
