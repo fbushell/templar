@@ -68,10 +68,10 @@ git clone https://yoursquarespacesite.com sqs_template
 You can now copy some default template starting points into your base-template
 ```shell
 # Trash default base-template
-rm -rf sqs_template/*
+# Delete everything other than the .git directory
 
 # Copy the custom base-template over
-cp -r .sqs_template sqs_template
+cp -r .sqs_template/* sqs_template
 
 # Trash the dot template
 rm -rf .sqs_template
