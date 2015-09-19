@@ -23,6 +23,11 @@ Then clone the Squarespace template into that clone. Say what!? If you're not an
 ```shell
 cd your_project
 
+# Templar is a starting point, so start anew
+rm -rf .git
+
+git init
+
 git clone https://yoursite.squarespace.com sqs_template
 ```
 
