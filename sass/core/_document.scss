@@ -1,4 +1,31 @@
 /******************************************************************************
+ * Document
+ *
+ * High-level document styles. Ideally, keep this to a minimum.
+ * Just what you need and nothing more.
+*******************************************************************************/
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+body {
+    background-color: $grey-bg;
+    color: $dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+    -webkit-touch-callout: none;
+    @include font-sans-text();
+    }
+a {
+    color: $dark;
+    text-decoration: none;
+    }
+
+
+
+/******************************************************************************
  * User Agent
 *******************************************************************************/
 ::-webkit-scrollbar {
@@ -13,27 +40,6 @@
     color: $white;
     }
 
-
-/******************************************************************************
- * Document
-*******************************************************************************/
-html {
-    background-color: $grey-bg;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    }
-body {
-    background-color: $grey-bg;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
-    -webkit-touch-callout: none;
-    @include font-sans-text();
-    }
-a {
-    text-decoration: none;
-    }
 
 
 /******************************************************************************

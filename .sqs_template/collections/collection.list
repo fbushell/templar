@@ -1,7 +1,0 @@
-{.section collection}
-    {.if categories}
-        {@|apply categories.block}
-    {.end}
-    
-    <section class="grid js-grid" data-type="collection" data-uri="{urlId}"></section>
-{.end}

@@ -1,4 +1,12 @@
 /******************************************************************************
+ * Mixins
+ *
+ * Nothing makes your variables shine more than some HAWT mixins around them!
+*******************************************************************************/
+
+
+
+/******************************************************************************
  * Fonts: Util
 *******************************************************************************/
 @mixin font-normal() {
@@ -7,98 +15,98 @@
 }
 
 
+
 /******************************************************************************
- * Fonts: Sans-serif
+ * Font Stacks
+ *
+ * Adding weights is pretty easy. Say you have a literal `semibold`.
+ * You would then simply create a mixin a little like this:
+ *
+ * @mixin font-sans-text-semibold() {
+ *     font-family: $sans-serif-text;
+ *     font-weight: 500;
+ *     @include font-normal();
+ * }
 *******************************************************************************/
 @mixin font-sans-text() {
     font-family: $sans-serif-text;
     font-weight: 400;
     @include font-normal();
 }
-@mixin font-sans-text-semibold() {
-    font-family: $sans-serif-text;
-    font-weight: 500;
-    @include font-normal();
-}
-@mixin font-sans-text-bold() {
-    font-family: $sans-serif-text;
-    font-weight: 600;
-    @include font-normal();
-}
-
-
-/******************************************************************************
- * Fonts: Serif
-*******************************************************************************/
 @mixin font-serif-text() {
     font-family: $serif-text;
     font-weight: 400;
     @include font-normal();
 }
-@mixin font-serif-text-semibold() {
-    font-family: $serif-text;
-    font-weight: 500;
-    @include font-normal();
-}
 
-@mixin font-serif-display() {
-    font-family: $serif-display;
-    font-weight: 400;
-    @include font-normal();
-}
-@mixin font-serif-display-light() {
-    font-family: $serif-display-light;
-    font-weight: 300;
-    @include font-normal();
-}
-@mixin font-serif-display-medium() {
-    font-family: $serif-display-medium;
-    font-weight: 500;
-    @include font-normal();
-}
 
 
 /******************************************************************************
  * Type
 *******************************************************************************/
-@mixin meta-type() {
-    color: $grey-text;
+@mixin meta() {
+    color: $dark;
     font-size: $meta-size;
     line-height: 1.8;
     @include font-sans-text();
 }
+@mixin b() {
+    font-size: 24px;
+    line-height: 1.66666667;
+    @include font-sans-text();
+}
 @mixin p() {
     font-size: $p-size;
-    line-height: 1.90909091;
+    line-height: 2.22222222;
+    max-width: $p-width;
+    width: 100%;
+    @include font-sans-text();
+}
+@mixin a() {
+    color: $dark;
+    display: inline;
+    font-size: $p-size;
+    line-height: 2.22222222;
+    text-decoration: none;
     @include font-sans-text();
 }
 @mixin h1() {
     font-size: $h1-size;
-    line-height: 1.0357;
-    @include font-serif-display();
+    line-height: 1.2;
+    @include font-serif-text();
 }
 @mixin h2() {
     font-size: $h2-size;
-    line-height: 1.27272727;
-    @include font-serif-display();
+    line-height: 1.375;
+    max-width: $lead-in-width;
+    width: 100%;
+    @include font-serif-text();
+}
+@mixin h3() {
+    font-size: $h3-size;
+    line-height: 1.28571429;
+    @include font-serif-text();
 }
 @mixin bq() {
     font-size: $bq-size;
-    line-height: 1.52631579;
-    @include font-serif-display-light();
+    line-height: 1.375;
+    max-width: $bq-width;
+    width: 100%;
+    @include font-serif-text();
 }
-@mixin title-image-lock() {
+@mixin title() {
     color: $dark;
     font-size: $title-size-px;
     line-height: 1.2;
-    @include font-serif-display-light();
+    @include font-serif-text();
 }
-@mixin title-type-lock() {
+@mixin headline() {
     color: $dark;
-    font-size: $title-size-big-vw;
+    font-size: $headline-size;
     line-height: 1.08695652;
-    @include font-serif-display-light();
+    @include font-serif-text();
 }
+
 
 
 /******************************************************************************

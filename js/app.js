@@ -11,7 +11,6 @@ import detect from "./detect";
 import resizes from "./resizes";
 import api from "./api";
 import dom from "./dom";
-import painter from "./painter";
 import nav from "./menus/nav";
 import intro from "./loading/intro";
 import * as util from "./util";
@@ -25,7 +24,6 @@ import * as util from "./util";
  */
 const modInit = function () {
     router.init();
-    painter.init();
     detect.init();
     resizes.init();
     nav.init();
@@ -38,7 +36,6 @@ const modInit = function () {
         util,
         router,
         detect,
-        painter,
         resizes
     };
 };
@@ -81,10 +78,10 @@ window.onload = function () {
     //apiLoad().done( () => modInit() );
 
 
-    // Present content
-    //util.emitter.on( "app--preload-done", appInit );
-
-
+    // Initialize modules
     modInit();
-    appInit();
+
+
+    // Present content
+    util.emitter.on( "app--preload-done", appInit );
 };

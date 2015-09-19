@@ -180,6 +180,7 @@ const api = {
                     // Collection?
                     collection = {
                         collection: data.collection,
+                        item: (data.item || null),
                         items: (data.items || null),
                         pagination: (data.pagination || null)
                     };
@@ -190,7 +191,7 @@ const api = {
                         collection
                     );
 
-                    def.resolve( data.items ? collection : null );
+                    def.resolve( (data.items || data.item) ? collection : null );
 
                 })
                 .fail( ( xhr, status, error ) => def.reject( error ) );

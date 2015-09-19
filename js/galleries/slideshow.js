@@ -144,7 +144,7 @@ const stopSlideshows = function () {
  */
 const execSlideshow = function ( $slideshow ) {
     const $images = $slideshow.find( ".js-gallery-image" );
-    const $thumbs = $slideshow.find( ".js-gallery-thumb" );
+    const $idx = $slideshow.find( ".js-gallery-idx" );
     const hammered = new Hammered( $slideshow[ 0 ], config.hammerDefaults );
 
     $slideshow.addClass( "is-loaded" );
@@ -158,11 +158,10 @@ const execSlideshow = function ( $slideshow ) {
         duration: util.getTransitionDuration( $images[ 0 ] ),
         hammered,
         $images,
-        $thumbs
+        $idx
     });
 
     $images.first().addClass( "is-active" );
-    $thumbs.first().addClass( "is-active" );
 
     hammered.on( "tap", ".js-gallery-image", onTapImage );
 };
@@ -226,8 +225,7 @@ const onTapImage = function () {
         data.index++;
     }
 
-    data.$thumbs.removeClass( "is-active" );
-    data.$thumbs.eq( data.index ).addClass( "is-active" );
+    data.$idx.text( `${data.index + 1} / ${data.length}` );
 
     $next = data.$images.eq( data.index );
     $curr.removeClass( "is-active" ).addClass( "is-exiting" );

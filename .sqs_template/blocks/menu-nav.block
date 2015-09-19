@@ -1,33 +1,28 @@
-<nav class="menu-nav js-menu-nav screen -text--center" data-content-field="navigation-menu-nav" {.repeated section items}{.folder?} data-{collection.typeName}="{collection.urlId}"{.end}{.end}>
+{###############################################################################
+    Navigation
+
+    This gets applied in `_header.region`
+    You can iterate within Indexes and Folders with a .folder? condition
+###############################################################################}
+<nav class="menu-nav js-menu-nav screen -text--center" data-content-field="navigation-menu-nav">
     <div class="screen__wrap wrapper expander">
         <div class="menu-nav__col column--2of4">
             <a href="/" class="js-menu-nav-logo">
-                <img class="logo js-logo" src="" alt="Logo" />
+                <span class="h3">Templar</span>
             </a>
         </div>
         <div class="menu-nav__col column--2of4 -text--right">
+            <ul class="menu-nav__ul menu-nav__ul--{collection.urlId}">
             {.repeated section items}
-                {.folder?}
-                <ul class="menu-nav__ul menu-nav__ul--{collection.urlId}">
-                    {.repeated section items}
-                        {.if collection.passwordProtected}
-                            {# Ignore the private stuff #}
-                        {.or}
-                            <li class="menu-nav__li menu-nav__li--{collection.urlId}">
-                                <a class="menu-nav__a menu-nav__a--{collection.urlId} js-menu-nav-item a-h {.if active}is-active{.end}" href="{collection.fullUrl}">{collection.navigationTitle}</a>
-                            </li>
-                        {.end}
-                    {.end}
-                </ul>
+                {.if collection.passwordProtected}
+                    {# Ignore the private stuff #}
+                {.or}
+                    <li class="menu-nav__li menu-nav__li--{collection.urlId}">
+                        <a class="menu-nav__a menu-nav__a--{collection.urlId} js-menu-nav-item a-h {.if active}is-active{.end}" href="{collection.fullUrl}">{collection.navigationTitle}</a>
+                    </li>
                 {.end}
             {.end}
+            </ul>
         </div>
     </div>
 </nav>
-
-
-<section class="menu-search js-menu-search screen -text--center">
-    <div class="screen__wrap wrapper expander">
-        <input class="menu-search__input js-menu-search-input headline" type="text" value="" placeholder="Search" autocomplete="off" spellcheck="false" />
-    </div>
-</section>

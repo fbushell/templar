@@ -1,5 +1,5 @@
 /******************************************************************************
- * Icon base
+ * Icons
 *******************************************************************************/
 .icon {
     color: inherit;
@@ -24,15 +24,25 @@
     }
 
 
+
 /******************************************************************************
- * Icon UI
- * https://icomoon.io/app/
+ * Icon Types
+ *
+ * Usually managed through IcoMoon
+ * https://icomoon.io/
+ *
+ * See ./sass/core/_fonts.scss for the @font-face implementation
+ *
+ * These are class structures such as `icon--list` or `icon--arrow-left`
 *******************************************************************************/
 
 
 
 /******************************************************************************
- * CSS Icons
+ * CSS Drawn Icons
+ *
+ * These faux icons are useful for things that CSS can draw really well.
+ * Use your best judgement on what should be drawn with CSS vs in the font.
 *******************************************************************************/
 .icon--faux {
     cursor: pointer;

@@ -59,60 +59,7 @@ const config = {
             userDragString: false,
             userSelectString: false
         }
-    }),
-
-
-    /**
-     *
-     * @public
-     * @member gridDefaults
-     * @memberof config
-     * @description The default options for Isotope JS.
-     *
-     */
-    gridDefaults: {
-        transitionDuration: 0,
-        percentPosition: true,
-        itemSelector: ".js-grid-item",
-        layoutMode: "masonry",
-        gutter: 0,
-        masonry: {
-            columnWidth: ".column--1of3"
-        }
-    },
-
-
-    /**
-     *
-     * @public
-     * @member wideScreenAspect
-     * @memberof config
-     * @description Not true as a 16/9, but dictates a more landscape dimension.
-     *
-     */
-    wideScreenAspect: 140,
-
-
-    /**
-     *
-     * @public
-     * @member defaultCategory
-     * @memberof config
-     * @description The non-category that signifies "all".
-     *
-     */
-    defaultCategory: "All",
-
-
-    /**
-     *
-     * @public
-     * @member defaultCollection
-     * @memberof config
-     * @description The default collection typeName configured for this site.
-     *
-     */
-    defaultCollection: "collection"
+    })
 };
 
 

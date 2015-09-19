@@ -1,5 +1,14 @@
 /******************************************************************************
- * Icon font
+ * Fonts
+ *
+ * Icon font:
+ * Usually managed through IcoMoon
+ * https://icomoon.io/
+ *
+ * Once you generate your font, download it and put it here:
+ * `/assets/fonts/icon/`
+ *
+ * Then configure the variables for it at ./sass/config/_variables.scss
 *******************************************************************************/
 @font-face {
     font-family: $icon-font;

@@ -1,18 +1,19 @@
 /******************************************************************************
  * Images
+ *
+ * Some default styles that help images layout better in general.
 *******************************************************************************/
 .image {
     max-width: 100%;
+    width: 100%;
     }
 
-
-.aspect--boutique {
-    padding-bottom: 41.875%;
-    }
 
 
 /******************************************************************************
  * Covers
+ *
+ * These are fullscreen bleed moments.
 *******************************************************************************/
 .cover {
     height: 100vh;
@@ -22,6 +23,7 @@
     height: 100%;
     width: 100%;
     }
+
 
 
 /******************************************************************************
@@ -47,4 +49,10 @@
     }
 .aspect--anamorphic-widescreen {
     padding-bottom: percentage( 9 / 16 );
+    }
+
+
+
+.aspect--boutique {
+    padding-bottom: 41.875%;
     }

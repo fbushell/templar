@@ -10,14 +10,12 @@ import Hammer from "hammerjs";
 
 
 import dom from "./dom";
-//import * as config from "./config";
 
 
 import Controller from "properjs-controller";
 import ScrollController from "properjs-scrollcontroller";
 import ResizeController from "properjs-resizecontroller";
 import ImageLoader from "properjs-imageloader";
-import MediaBox from "properjs-mediabox";
 
 
 /**
@@ -461,6 +459,19 @@ const splitArray = function ( arr, num ) {
 };
 
 
+/**
+ *
+ * @description Determine whether we are in Squarespace /config land or not.
+ * @method isConfig
+ * @memberof util
+ * @returns {boolean}
+ *
+ */
+const isConfig = function () {
+    return (window.parent.location.pathname.indexOf( "/config" ) !== -1);
+};
+
+
 
 /******************************************************************************
  * Export
@@ -491,5 +502,8 @@ export default {
     getTransitionDuration,
     getTransformValues,
     getNumericStyleValue,
-    closestValue
+    closestValue,
+
+    // Condition
+    isConfig
 };

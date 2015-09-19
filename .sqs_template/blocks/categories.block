@@ -1,7 +1,0 @@
-<ul class="categories js-categories">
-    {.repeated section categories}
-        <li class="categories__li js-categories-item">
-            {@}
-        </li>
-    {.end}
-</ul>

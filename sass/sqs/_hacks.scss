@@ -1,15 +1,10 @@
 /******************************************************************************
  * Squarespace Hacks
+ *
+ * This is the nitty gritty on hacking some system renderings.
 *******************************************************************************/
-.sqs-layout .sqs-block {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-    }
-.sqs-layout .sqs-block-image,
-.sqs-layout .sqs-block-gallery .gallery:not(.gallery--slider) {
-    padding-left: $wrapper-padding !important;
-    padding-right: $wrapper-padding !important;
-    }
+
+// Remove this if you are making a store.
 .absolute-cart-box {
     display: none !important;
     }

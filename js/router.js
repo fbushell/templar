@@ -7,6 +7,7 @@ import preload from "./preload";
 import scrolls from "./scrolls";
 import * as galleries from "./galleries";
 import cover from "./cover";
+import blocks from "./blocks";
 
 
 import PageController from "properjs-pagecontroller";
@@ -53,6 +54,7 @@ const router = {
             scrolls,
             preload,
             cover,
+            blocks,
 
             galleries.slideshow,
             galleries.slider,

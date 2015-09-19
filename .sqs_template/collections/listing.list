@@ -1,3 +1,0 @@
-<article class="article article--{collection.urlId} js-article wrapper expander -text--center">
-    <section class="list js-list" data-type="collection" data-uri="{urlId}"></section>
-</article>
