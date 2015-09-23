@@ -5,7 +5,7 @@
  * @description Houses app-wide utility methods.
  *
  */
-import $ from "jquery/dist/jquery";
+import $ from "jquery/dist/jquery.min";
 import Hammer from "hammerjs";
 
 

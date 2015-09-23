@@ -1,5 +1,5 @@
 import * as config from "./config";
-import $ from "jquery/dist/jquery";
+import $ from "jquery/dist/jquery.min";
 import paramalama from "paramalama";
 
 

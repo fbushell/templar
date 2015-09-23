@@ -1,4 +1,4 @@
-import $ from "jquery/dist/jquery";
+import $ from "jquery/dist/jquery.min";
 
 
 import * as util from "./util";
