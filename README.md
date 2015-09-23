@@ -26,8 +26,6 @@ cd your_project
 # Templar is a starting point, so start anew
 rm -rf .git
 
-git init
-
 git clone https://yoursite.squarespace.com sqs_template
 ```
 
@@ -39,6 +37,8 @@ git clone git://github.com/jquery/jquery.git
 Your Github repository should be on the `master` branch by default. Your Squarespace template will be on `master`. jQuery on `master` of course.
 
 You'll also want to change some fields in the `package.json` file. Specifically the `title`, `name`, `description`, `repository`, `bugs`, `licenses`, and `contributors` fields.
+
+As well, you'll want to completely change the `README.md` to describe your project's specifics.
 
 
 ### Install
@@ -106,7 +106,9 @@ This project bootstraps a totally custom `base-template` approach. The following
 ```shell
 # Trash your current template.
 # Delete everything other than .git
-rm -rf sqs_template/.gitignore and find sqs_template/* -not -name '.git' | xargs rm -rf
+rm -rf sqs_template/.gitignore
+
+find sqs_template/* -not -name '.git' | xargs rm -rf
 
 # Copy the custom base-template over
 cp -r .sqs_template/* sqs_template
@@ -132,6 +134,17 @@ git commit -m "Base template reset"
 
 # Push the new template to your squarespace site
 git push origin master
+
+# Now initialize git on your top-level template
+cd ..
+
+git init
+
+git remote add origin git@github.com:username/reponame.git
+
+git commit -m "First commit."
+
+git push -u origin master
 ```
 
 
