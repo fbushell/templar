@@ -148,8 +148,25 @@ git push -u origin master
 ```
 
 
-### Template Layout
-Once you have the bootstrap template all copied over
+### Sass vs Less
+Squarespace uses [Less](http://lesscss.org/), however some people prefer [Sass](http://sass-lang.com/). I am one of those people. This template operates under the `Sass > Less` model and thus compiles your sass into your `sqs_template` as pure `CSS`. One known bug in the Squarespace Less compiler is that it does not correctly handle the [CSS calc](http://www.w3.org/TR/css3-values/#calc-notation) feature. In order to get around this you have to interpolate your use of `calc` in your Sass files. This syntax will produce the correct result as compiled through Sass and that result will produce the correct result as compiled through Less.
+
+```css
+/* Sass */
+.foo {
+    width: #{"calc( ~\"100% - 40px\" )"}
+}
+
+/* Sass -> CSS */
+.foo {
+    width: calc( ~"100% - 40px" );
+}
+
+/* CSS -> Less -> CSS */
+.foo {
+    width: calc( 100% - 40px );
+}
+```
 
 
 ### Block Overrides
