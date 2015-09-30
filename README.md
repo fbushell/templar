@@ -26,7 +26,7 @@ cd your_project
 # Templar is a starting point, so start anew
 rm -rf .git
 
-git clone https://yoursite.squarespace.com sqs_template
+git clone https://yoursite.squarespace.com/template.git sqs_template
 ```
 
 Then clone the jQuery repository for the custom build tool.
