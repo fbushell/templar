@@ -107,7 +107,7 @@
         "vars-on-top": 2,
         "wrap-iife": [
             2,
-            "outside"
+            "inside"
         ],
         "yoda": [
             2,
@@ -239,7 +239,7 @@
             2
         ],
         "no-multiple-empty-lines": 0,
-        "no-nested-ternary": 2,
+        "no-nested-ternary": 1,
         "no-new-object": 2,
         "no-spaced-func": 2,
         "no-ternary": 0,
