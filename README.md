@@ -19,7 +19,7 @@ Clone this project to your local machine.
 git clone git@github.com:kitajchuk/templar.git your_project
 ```
 
-Then clone the Squarespace template into that clone. Say what!? If you're not an admin developer for the site, shoot BK and email and he'll make that happen for you ;)
+Then clone the Squarespace template into that clone.
 ```shell
 cd your_project
 
